@@ -1,0 +1,53 @@
+Tax Invoice
+Rajesh Fancy Yarns LLP Invoice No. e-Way Bill No. Dated
+3rd Floor, Hno.936/1, 44/24-25 2317 8155 8521 19-Jun-24
+Gala No 304, Sai Leela Building, Delivery Note Mode/Terms of Payment
+Narpoli, Bhiwandi 44 15 Days
+GSTIN/UIN: 27ABFFR9752A1Z3 Reference No. & Date. Other References
+State Name : Maharashtra, Code : 27 44 dt. 19-Jun-24
+Buyer’s Order No. Dated
+Consignee (Ship to)
+Jai Balaji Textile Mills
+Dispatch Doc No. Delivery Note Date
+366/368, Kalbadevi Road,
+19-Jun-24
+Room No 39, 2nd Floor,
+Dispatched through Destination
+Mumbai
+Maa Hinglaj Transport KK Silk Mills, Umbergaon
+GSTIN/UIN :27AADFJ2675D1ZH
+Terms of Delivery
+State Name :Maharashtra, Code : 27
+Buyer (Bill to)
+Jai Balaji Textile Mills
+366/368, Kalbadevi Road,
+Room No 39, 2nd Floor,
+Mumbai
+GSTIN/UIN :27AADFJ2675D1ZH
+State Name :Maharashtra, Code : 27
+Sl No. & Kind Description of Goods HSN/SAC Quantity Rate per Amount
+No. of Pkgs.
+1 18 Fancy Yarn 54023300 54023300 869.800 KG 198.00 KG 1,72,220.40
+Catonic Mini Taspa 235D
+Less : Brokarge on Sale (-)1% (-)1,722.20
+Less : Cash Discount on Sale (-)1% (-)1,722.20
+CGST 6% 10,126.56
+SGST 6% 10,126.56
+Less : ROUND OFF (-)0.12
+Total 869.800 KG (cid:299) 1,89,029.00
+Amount Chargeable (in words) E. & O.E
+INR One Lakh Eighty Nine Thousand Twenty Nine Only
+HSN/SAC Taxable CGST SGST/UTGST Total
+Value Rate Amount Rate Amount Tax Amount
+54023300 1,68,776.00 6% 10,126.56 6% 10,126.56 20,253.12
+Total 1,68,776.00 10,126.56 10,126.56 20,253.12
+Tax Amount (in words) : INR Twenty Thousand Two Hundred Fifty Three and Twelve paise Only
+Company’s Bank Details
+Bank Name :PUNJAB NATIONAL BANK
+A/c No. :0521102100000567
+Branch & IFS Code :GOREGAON(E) & PUNB0052110
+Declaration for Rajesh Fancy Yarns LLP
+We declare that this invoice shows the actual price
+of the goods described and that all particulars are
+true and correct. Authorised Signatory
+This is a Computer Generated Invoice

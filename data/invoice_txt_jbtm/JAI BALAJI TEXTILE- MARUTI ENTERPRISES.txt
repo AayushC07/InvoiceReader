@@ -1,0 +1,57 @@
+TAX INVOICE
+DAMODARINDUSTRIESLIMITED  OriginalforReceipient
+PlotNo.T/26,AdditionalAmaravatiIndustrialArea  DuplicateforTransporter
+NandgaonPeth,Amaravati.  TriplicateforSupplier
+PostCode:444801StateName&Code:Maharashtra27
+GSTIN:27AAACD3850G1ZV PANNO:AAACD3850G
+CINNO:L17110MH1987PLC045575
+Regd.Office:19/22&27/30,MadhuEstate,PandurangBudhkarMarg,Worli,
+MumbaiINDIA400013TEL:022-66610301
+ReverseCharge:N TypeofSale:DomesticSaleDocumentNo:1000125112 TransporterName :OMLOGISTICS
+InvoiceNo:DO2724504594 InvoiceDate:14.02.2025 VehicleNo:MH40CT5905Rly./L.R.No/Date: /
+ChallanNo:0800134840 ChallanDate:14.02.2025 Representative:
+P.O.No:TIWA108306 P.O.Date : IndentNo.:TIWA108306 IndentDate:11.02.2025
+ACKNo.:122525316718797 ACKDate:2025-02-14145600 EWAYBillNo:251908945768 E-WayDate:14.02.2025
+IRN:078c6930d68d82051fe6943f21947ad37b9cd364da60afdacef123462583b808
+BUYERNAME&ADDRESS CONSIGNEENAME&ADDRESS:
+JAIBALAJITEXTILEMILLS(DELIVERY) MARUTIENTERPRISE
+DIAMONDMANSION,2NDFLOORROOMNO:39,366/368.KALBADEVI NO4,VYANKTESHVIHAR,SANGRAMCHOWK,
+ROAD, ICHALKARANJI
+MUMBAI PostCode:416115P.O.S:27/Maharashtra
+PostCode:400002P.O.S:27/Maharashtra GSTINNO:27AAIHM2442J1Z3
+GSTINNO:27AADFJ2675D1ZH PAN:AAIHM2442J
+PAN:AADFJ2675D AgentName:
+PaymentTerms:100%Advance
+S.N Material Description HSNCode Quantity Unit Rate NetAmount Cgst%/Sgst%
+LotNo. Quantity Unit
+1 30024064 20/1MALAI 55101110 2,540.160 Rs/1KG 314.00 797,610.24 12.00
+LYOCELLCOTTONYARN
+243269 KG
+2,540.16
+TotalQtyandUnits: 2,540.160KG 56 797,610.24
+INSURANCE: 0.20% 1,595.22
+FREIGHT&LOADINGCHARGES: 4.00 10,160.64
+SGST: 48,561.97
+CGST: 48,561.97
+RoundingOff: 0.04-
+TOTAL: INR 906,490.00
+AMOUNTINWORDS: Rs. NineLakhSixThousandFourHundredNinetyRupeesOnly
+CONDITIONS:
+CertifiedthattheparticularsGivenAbovearetrueandCorrectandtheamountindicatedrepresentsthepriceactuallychargedandtheirisnoflowofadditional
+considerationdirectlyorindirectlyfromthebuyers.
+Thegoodssoldaspertherulesandregulationof"TheBombayyarnMerchantsAssociationandExchangeLtd".IfanydisputearisesaboutthisTransaction,TheSame
+shallhavetobereferredto"TheBombayYarnMerchantsAssociationandExchangeLtd",MumbaiforDecisionunderitsarbitrationrulesandawardsmadethereundershall
+beBindinguponthepartiesandsubjecttomumbaijurisdictiononly.
+AllGoodstobepretestedbeforeuse.Anyproblemorrejectiontobementionedwithin10daysfrominvoicedate.ThepaymenttobemadeBilltoBillwithin12daysfrom
+thebilldateandInterest@18%P.A.alongwithGSTshallbechargedafter15days.
+#AnyClaim/Liabilitywillbesettledatyarnstageonlyandcomplainttobereceivedwithin10daysfromthedateofinvoice.
+#Allfancyyarnstobeusedinmultishuttle.
+#Sizing-Pleaserefertosizingnoteoffancyyarnbeforeuse.
+#InvoicePriceasperpriceandtermsconfirmed.Anyvariationshouldbeinformedwithin7daysofinvoice.
+TCSisapplicablefrom01-04-2021@0.100%.
+BANKNAME CCA/CNO IFSC/RTGS For:DAMODARINDUSTRIESLIMITED
+ICICBANKLIMITED 054451000190 ICIC0000544
+STATEBANKOFINDIA 30104575672 SBIN0008965
+KOTAKMAHINDRABANK 695044000178 KKBK0000638
+CheckedBy
+ThisiscomputergeneratedInvoicenosignaturerequired.E-Mail-support@damodargroup.comHelplineNo:+91-9022910396

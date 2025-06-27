@@ -1,0 +1,53 @@
+Tax Invoice
+RICH CREATION Invoice No. Dated
+GALA NO. 164A,BULG. NO. 06 RC/149/24-25 31-Jan-25
+MITTAL INDUSTRIAL ESTATE , Delivery Note Mode/Terms of Payment
+MAROL A.K. ROAD
+MUMBAI : 400059.
+GSTIN/UIN: 27AHHPP5241J1Z3 Reference No. & Date. Other References
+State Name : Maharashtra, Code : 27
+E-Mail : j.richcreations@gmail.com RC/149/24-25 dt. 31-Jan-25
+Consignee (Ship to) Buyer's Order No. Dated
+M/S. JAI BALAJITEXTILE MILL
+ROOM NO. 39,DIAMON MANSION Dispatch Doc No. Delivery Note Date
+2ND FLOOR,366/368, KALBADEVI ROAD
+MUMBAI: 40002.
+Dispatched through Destination
+TEL: 9867598408
+GSTIN/UIN : 27AADFJ2675D1ZH
+Terms of Delivery
+State Name : Maharashtra, Code : 27
+Buyer (Bill to)
+M/S. JAI BALAJITEXTILE MILL
+ROOM NO. 39,DIAMON MANSION
+2ND FLOOR,366/368, KALBADEVI ROAD
+MUMBAI: 40002.
+TEL: 9867598408
+GSTIN/UIN : 27AADFJ2675D1ZH
+State Name : Maharashtra, Code : 27
+Sl No. & Kind Description of HSN/SAC Quantity Rate per Disc. % Amount
+No. of Pkgs. Services
+1 Consultancy Charges 998391 10,000.00
+CONSULTANCY
+CHARGES FOR THE
+MONTH JANUARY 2025
+OUTPUT CGST 9% 9 % 900.00
+OUTPUT SGST 9% 9 % 900.00
+Total ₹ 11,800.00
+Amount Chargeable (in words) E. & O.E
+INR Eleven Thousand Eight Hundred Only
+HSN/SAC Taxable CGST SGST/UTGST Total
+Value Rate Amount Rate Amount Tax Amount
+998391 10,000.00 9% 900.00 9% 900.00 1,800.00
+Total 10,000.00 900.00 900.00 1,800.00
+Tax Amount (in words) : INR One Thousand Eight Hundred Only
+Company's Bank Details
+Bank Name : HDFC BANK
+A/c No. : 50200063876214
+Company's PAN : AHHPP5241J Branch & IFS Code: MAROL & HDFC0000592
+Declaration for RICH CREATION
+We declare that this invoice shows the actual price of
+the goods described and that all particulars are true and
+correct. Authorised Signatory
+SUBJECT TO MUMBAI JURISDICTION
+This is a Computer Generated Invoice
