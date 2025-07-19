@@ -1,0 +1,128 @@
+You are a smart accountant and invoice reader. Your task is to analyze the text of a GST invoice extracted from a PDF using the pdfplumber tool.
+
+The invoice follows the Indian GST format. The extracted text may contain misleading or inconsistent line breaks, so read with logical structure and domain knowledge.
+
+Your objective is to extract the following fields from the invoice text, ensuring high accuracy using Indian invoice conventions:
+
+Required Output Fields:
+
+1. Seller Name  
+2. Seller GST Number  
+3. Buyer Name  
+4. Buyer GST Number  
+5. Invoice Number  
+6. Invoice Date (Format: dd/mm/yyyy)  
+7. HSN Code  
+8. Sub Amount (Amount before taxes)  
+9. IGST (Amount in INR)  
+10. CGST (Amount in INR)  
+11. SGST (Amount in INR)  
+12. Total Amount After Taxes (Grand Total)
+
+---
+
+### Parsing Rules and Constraints:
+
+- **Buyer Name**: The organization purchasing goods. Ignore role tags like (Sales), (Dispatch), etc.
+- **Buyer GST**: Must be different from Seller GST. Take the GST closest to the Buyer Name. Ensure no spaces are present in the GST number.
+- **Seller Name**: Organization issuing the invoice.
+- **Seller GST**: Closest GST to Seller Name. No spaces. Must be distinct from Buyer GST.
+
+- **Invoice Number**: Unique ID. Avoid PRNs or reference numbers. Use formats like INV/2024/001, A67-2024-005. Avoid nearby text contamination.
+
+- **Invoice Date**: Close to Invoice Number. Regardless of how it appears (e.g., 2024-04-19 or 19 Apr 2024), return it in `dd/mm/yyyy` format.
+
+- **HSN Code**:  
+    - If only one unique HSN exists → return it.  
+    - If multiple HSN codes exist → return `null`.
+
+- **Sub Amount** (Amount Before Taxes):  
+    - Find label like: “Subtotal”, “Amount”, “Taxable Amount”, “Tax’ble Value”, or similar.  
+    - Must be ≤ Total Amount.
+
+- **IGST / CGST / SGST**:
+    - **Either** IGST **or** (CGST + SGST) will appear — **never both**.
+    - If IGST exists, then CGST and SGST must be zero or null.
+    - If CGST and SGST exist, then IGST must be zero or null.
+    - Always return tax values in INR, not percentages.
+
+- **Total Amount** (After Taxes):  
+    - Must be ≥ Sub Amount + applicable taxes.
+    - Validate mathematically:
+        - If IGST is present: `Total Amount ≈ Sub Amount + IGST`
+        - If CGST and SGST are present: `Total Amount ≈ Sub Amount + CGST + SGST`
+
+---
+
+### Output Format:
+Respond only with JSON in the structure below:
+
+```json
+{{
+  "Seller Name": "",
+  "Seller GST": "",
+  "Buyer Name": "",
+  "Buyer GST": "",
+  "Invoice Number": "",
+  "Invoice Date": "",
+  "HSN Code": "",
+  "Sub Amount": "",
+  "IGST": "",
+  "CGST": "",
+  "SGST": "",
+  "Total Amount": ""
+}}
+
+Input text - 
+Tax Invoice
+RICH CREATION Invoice No. Dated
+GALA NO. 164A,BULG. NO. 06 RC/27/24-25 21-Jun-24
+MITTAL INDUSTRIAL ESTATE , Delivery Note Mode/Terms of Payment
+MAROL A.K. ROAD
+MUMBAI : 400059.
+GSTIN/UIN: 27AHHPP5241J1Z3 Reference No. & Date. Other References
+State Name : Maharashtra, Code : 27
+E-Mail : j.richcreations@gmail.com RC/27/24-25 dt. 21-Jun-24
+Consignee (Ship to) Buyer's Order No. Dated
+M/S. JAI BALAJITEXTILE MILL (Sales)
+ROOM NO. 39,DIAMON MANSION Dispatch Doc No. Delivery Note Date
+2ND FLOOR,366/368, KALBADEVI ROAD
+MUMBAI: 40002.
+Dispatched through Destination
+TEL: 9867598408
+LOCAL TRANSPORT MUMBAI
+GSTIN/UIN : 27AADFJ2675D1ZH
+Terms of Delivery
+State Name : Maharashtra, Code : 27
+Buyer (Bill to)
+M/S. JAI BALAJITEXTILE MILL (Sales)
+ROOM NO. 39,DIAMON MANSION
+2ND FLOOR,366/368, KALBADEVI ROAD
+MUMBAI: 40002.
+TEL: 9867598408
+GSTIN/UIN : 27AADFJ2675D1ZH
+State Name : Maharashtra, Code : 27
+Sl No. & Kind Description of Goods HSN/SAC Quantity Rate per Disc. % Amount
+No. of Pkgs.
+1 1 Finish Fabrics-551511 551511 111.00 mtr 90.00 mtr 9,990.00
+PV MILLANCE LYCRA
+OUTPUT CGST 2.5% 2.50 % 249.75
+OUTPUT SGST 2.5% 2.50 % 249.75
+Round Off (Sale) 0.50
+Total 111.00 mtr ₹ 10,490.00
+Amount Chargeable (in words) E. & O.E
+INR Ten Thousand Four Hundred Ninety Only
+HSN/SAC Taxable CGST SGST/UTGST Total
+Value Rate Amount Rate Amount Tax Amount
+551511 9,990.00 2.50% 249.75 2.50% 249.75 499.50
+Total 9,990.00 249.75 249.75 499.50
+Tax Amount (in words) : INR Four Hundred Ninety Nine and Fifty paise Only
+Company's Bank Details
+Bank Name : HDFC BANK
+A/c No. : 50200063876214
+Company's PAN : AHHPP5241J Branch & IFS Code: MAROL & HDFC0000592
+Declaration for RICH CREATION
+We declare that this invoice shows the actual price of
+the goods described and that all particulars are true and
+correct. Authorised Signatory
+This is a Computer Generated Invoice
