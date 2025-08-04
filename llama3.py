@@ -92,9 +92,8 @@ Required Output Fields:
 ---
 
 ### Output Format:
-Respond only with JSON in the structure below:
+Respond only with a valid JSON object (no code block, no explanation):
 
-```json
 {{
   "Seller Name": "",
   "Seller GST": "",
@@ -123,22 +122,30 @@ Invoice Text:
             ]
         )
 
-        # Get raw model response
         reply = response['message']['content'].strip()
 
-        # Try to parse the response as JSON
+        if reply.startswith("```json"):
+            reply = reply.replace("```json", "").strip()
+        if reply.endswith("```"):
+            reply = reply[:-3].strip()
+
+        start = reply.find("{")
+        end = reply.rfind("}")
+        if start == -1 or end == -1:
+            raise ValueError("No JSON object found in model response.")
+
+        reply = reply[start:end+1]
+
+
         parsed_data = json.loads(reply)
+
         return parsed_data
 
-    except json.JSONDecodeError:
-        st.error("⚠️ LLaMA's response is not valid JSON. Please review the output below:")
-        st.code(reply)
-        return None
     except Exception as e:
-        st.error(f"❌ Error parsing invoice with LLAMA 3: {e}")
+        st.warning(f"⚠️ Failed to parse invoice. LLaMA output was invalid.\nError: {e}")
         return None
 
-# ✅ Process uploaded files
+# Process uploaded files
 if uploaded_files and not st.session_state.uploaded:
     with st.spinner("Parsing invoices using LLAMA 3..."):
         results = []
@@ -151,7 +158,7 @@ if uploaded_files and not st.session_state.uploaded:
         st.session_state.invoice_results = results
         st.session_state.uploaded = True
 
-# ✅ Display and download results
+#  Display and download results
 if st.session_state.invoice_results:
     df = pd.DataFrame(st.session_state.invoice_results)
     st.success("Invoices parsed successfully!")
@@ -168,7 +175,7 @@ if st.session_state.invoice_results:
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
 
-# ✅ Reset button
+# Reset button
 if st.button("🔄 Reset and Upload Again"):
     st.session_state.invoice_results = []
     st.session_state.uploaded = False
